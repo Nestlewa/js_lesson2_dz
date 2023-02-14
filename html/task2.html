@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">
+                Задача 2. Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
+            </p>
+            <script>
+                //Отримуємо вхідні дані
+                const birthYear = parseInt(prompt('Введіть рік Вашого народження', '1900'));
+                const PRESENT_YEAR = new Date().getFullYear();
+                //Обчислюємо необхідні вирази
+                const totalYears = PRESENT_YEAR - birthYear;
+                //Виводимо результат
+                document.write(`
+                    <table>
+                        <tr>
+                            <td>Рік народження</td>
+                            <td>${birthYear}
+                        </tr>
+                        <tr>
+                            <td>Поточний рік</td>
+                            <td>${PRESENT_YEAR}
+                        </tr>
+                        <tr>
+                            <td>Кількість років користувача</td>
+                            <td>${totalYears}
+                        </tr>
+                    </table>
+                `)
+            </script>
+        </section>
+    </div>
+
+</body>
+
+</html>

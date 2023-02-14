@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">
+                Задача 5. Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.
+            </p>
+            <script>
+                //Отримуємо вхідні дані
+                let userSec = parseInt(prompt('Введіть кількість секунд з моменту Вашого пробудження', '0'))
+                //Обчислюємо необхідні вирази
+                let min = Math.floor((userSec % 3600) / 60)
+                let hour = Math.floor(userSec / 3600)
+                let sec = Math.floor(userSec % 3600) % 60
+                //Виводимо результат
+                document.write(`
+                <table>
+                    <tr>
+                        <td>Початкові дані</td>
+                        <td>Кількість секунд = ${userSec}</td>
+                    </tr>
+                    <tr>
+                        <td>Кількість годин</td>
+                        <td>${hour}</td>
+                    </tr>
+                    <tr>
+                        <td>Кількість хвилин</td>
+                        <td>${min}</td>
+                    </tr>
+                    <tr>
+                        <td>Кількість секунд</td>
+                        <td>${sec}</td>
+                    </tr>
+                    <tr>
+                        <td>Пройшло часу з моменту пробудження</td>
+                        <td>${hour} год ${min} хв ${sec} сек</td>
+                    </tr>
+            `)
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>

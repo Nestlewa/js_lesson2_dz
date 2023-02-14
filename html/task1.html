@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">
+                Задача 1. Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+            </p>
+
+            <script>
+                //Отримуємо вхідні дані
+                let firstDigit = parseFloat(prompt('Введіть перше число', '0'))
+                let secondDigit = parseFloat(prompt('Введіть друге число', '0'))
+                //Обчислюємо необхідні вирази
+                let sum = (firstDigit + secondDigit)
+                let multiplication = (firstDigit * secondDigit)
+                let division = (firstDigit / secondDigit)
+                //Виводимо результат
+                document.write(`
+                    <table>
+                    <tr>
+                        <th>Початкові значення</th>
+                        <th>Змінна firstDigit: ${firstDigit} ---- Змінна secondDigit: ${secondDigit}</th>
+                    </tr>
+                    <tr>
+                        <td>Сума</td>
+                        <td>${sum.toFixed(2)}</td>
+                    </tr>
+                    <tr>
+                        <td>Добуток</td>
+                        <td>${multiplication.toFixed(2)}</td>
+                    </tr>
+                    <tr>
+                        <td>Частка двох чисел</td>
+                        <td>${division.toFixed(2)}</td>
+                    </tr>
+                    </table>
+                    `)
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>

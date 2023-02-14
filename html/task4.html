@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">
+                Задача 4. Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+            </p>
+
+            <script>
+                //Отримуємо вхідні дані
+                let lengthInCentimeter = parseFloat(prompt('Введіть довжину у сантиметрах', '0.5'))
+                const centimetersInMetr = 100
+                const centimetersInKilometr = 100000
+                //Обчислюємо необхідні вирази
+                let lengthInMetr = lengthInCentimeter / centimetersInMetr
+                let lengthInKilometr = lengthInCentimeter / centimetersInKilometr
+                //Виводимо результат
+                document.write(`
+                    <table>
+                        <tr>
+                            <td>Початкові дані</td>
+                            <td>Довжина у сантиметрах = ${lengthInCentimeter}</td>
+                        </tr>
+                        <tr>
+                            <td>Сантиметри у метрах</td>
+                            <td>Довжина у метрах = ${lengthInMetr}</td>
+                        </tr>
+                        <tr>
+                            <td>Сантиметри у кілометрах</td>
+                            <td>Довжина у кілометрах = ${lengthInKilometr}</td>
+                        </tr>
+                    </table>
+                `)
+            </script>
+        </section>
+    </div>
+
+</body>
+
+</html>

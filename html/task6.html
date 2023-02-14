@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 6</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">
+                Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість
+                кожного
+                товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+            </p>
+            <script>
+                //Отримуємо вхідні дані
+                let firstItemName = prompt('Введіть назву першого продукту', 'Апельсин')
+                let firstItemPrice = parseFloat(prompt('Введіть вартість першого товару', '0'))
+                let firstItemQuantity = parseFloat(prompt('Введіть кількість першого товару(кг, шт, л)', '0'))
+                let secondItemName = prompt('Введіть назву другого продукту', 'Молоко')
+                let secondItemPrice = parseFloat(prompt('Введіть вартість другого товару', '0'))
+                let secondItemQuantity = parseFloat(prompt('Введіть кількість другого товару(кг, шт, л)', '0'))
+                let thirdItemName = prompt('Введіть назву третього продукту', 'Хліб')
+                let thirdItemPrice = parseFloat(prompt('Введіть вартість третього товару', '0'))
+                let thirdItemQuantity = parseFloat(prompt('Введіть кількість третього товару(кг, шт, л)', '0'))
+                //Обчислюємо необхідні вирази
+                let firstItemTotalCost = firstItemPrice * firstItemQuantity
+                let secondItemTotalCost = secondItemPrice * secondItemQuantity
+                let thirdItemTotalCost = thirdItemPrice * thirdItemQuantity
+                let totalCoast = firstItemTotalCost + secondItemTotalCost + thirdItemTotalCost
+                let date = new Date().toLocaleString()
+                //Виводимо результат
+                document.write(`
+                <table>
+                    <tr>
+                        <td>${firstItemName}</td>
+                    </tr>
+                    <tr>
+                        <td>${firstItemPrice} x ${firstItemQuantity}</td>
+                        <td>${firstItemTotalCost}</td>
+                    </tr>
+                    <tr>
+                        <td>${secondItemName}</td>
+                    </tr>
+                    <tr>
+                        <td>${secondItemPrice} x ${secondItemQuantity}</td>
+                        <td>${secondItemTotalCost}</td>
+                    </tr>
+                    <tr>
+                        <td>${thirdItemName}</td>
+                    </tr>
+                    <tr>
+                        <td>${thirdItemPrice} x ${thirdItemQuantity}</td>
+                        <td>${thirdItemTotalCost}</td>
+                    </tr>
+                    <tr>
+                        <td>Разом</td>
+                    </tr>
+                    <tr>
+                        <td>${totalCoast}</td>
+                    </tr>
+                </table>
+                <h4>Дата ---- ${date}</h4>
+                `)
+            </script>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 0</title>
+</head>
+
+<body>
+    <!-- Задача 0. Обчислити значення виразів -->
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">Задача 0. Обчислити значення виразів</p>
+            <script>
+                //Отримуємо вхідні дані
+                let a = parseFloat(prompt('Вкажіть значення а', '0'))
+                let b = parseFloat(prompt('Вкажіть значення b', '0'))
+                let c = parseFloat(prompt('Вкажіть значення с', '0'))
+                //Обчислюємо необхідні вирази
+                let s1 = a + 12 + b
+                let s2 = Math.sqrt((a + b) / (2 * a))
+                let s3 = Math.cbrt((a + b) * c)
+                let s4 = Math.sin(a / (-b))
+                //Виводимо результат
+                document.write(`
+                <table>
+                    <tr>
+                        <th>Початкові значення</th>
+                        <th>Змінна а: ${a} ---- Змінна b: ${b} ---- Змінна c: ${c}</th>
+                    </tr>
+                    <tr>
+                        <td>S1</td>
+                        <td>${s1}
+                    </tr>
+                    <tr>
+                        <td>S2</td>
+                        <td>${s2.toFixed(2)}
+                    </tr>
+                    <tr>
+                        <td>S3</td>
+                        <td>${s3.toFixed(2)}
+                    </tr>
+                    <tr>
+                        <td>S4</td>
+                        <td>${s4.toFixed(2)}
+                    </tr>
+                `)
+            </script>
+        </section>
+    </div>
+</body>
+
+</html>

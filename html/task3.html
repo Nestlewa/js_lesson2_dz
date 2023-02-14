@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="wrapper__task math-task">
+            <a class="math-task__link" href="../html/index.html">Список задач</a>
+            <p class="math-task__text">
+                Задача 3. Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної
+                вартості).
+            </p>
+
+            <script>
+                //Отримуємо вхідні дані
+                let itemCost = parseFloat(prompt('Введіть вартість одиниці товару', '2.5'))
+                let itemQuantity = parseInt(prompt('Введіть кількість товару', '5'))
+                const TAX_PERCENT = 0.05
+                //Обчислюємо необхідні вирази
+                let totalPrice = itemCost * itemQuantity
+                let totalTax = totalPrice * TAX_PERCENT
+                //Виводимо результат
+                document.write(`
+                    <table>
+                        <tr>
+                            <td>Початкові зачення</td>
+                            <td>Змінна Вартість товару = ${itemCost} ---- Кількість товару = ${itemQuantity}</td>
+                        </tr>
+                        <tr>
+                            <td>Вартість товару</td>
+                            <td>${itemCost}</td>
+                        </tr>
+                        <tr>
+                            <td>Кількість товару</td>
+                            <td>${itemQuantity}</td>
+                        </tr>
+                        <tr>
+                            <td>Загальна вартість товару</td>
+                            <td>${totalPrice}</td>
+                        </tr>
+                        <tr>
+                            <td>Загальна сума ПДВ</td>
+                            <td>${totalTax}</td>
+                        </tr>
+                `)
+            </script>
+        </section>
+    </div>
+
+</body>
+
+</html>
